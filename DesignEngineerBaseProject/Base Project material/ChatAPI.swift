@@ -11,6 +11,10 @@ import Foundation
 final class ChatAPI {
     private var messagePassthrough = PassthroughSubject<ChatMessage, Never>()
     private var randomMessagesTask: Task<Void, Never>?
+    
+    init() {
+        startRandomMessagePipeline()
+    }
 }
 
 /// The interface that the sample app should interact with
