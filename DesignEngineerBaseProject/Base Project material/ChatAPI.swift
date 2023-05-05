@@ -21,7 +21,6 @@ final class ChatAPI {
 extension ChatAPI {
     /// Returns a Combine publisher of messages coming through the mock API
     func subscribe() -> AnyPublisher<ChatMessage, Never> {
-        startRandomMessagePipeline()
         return messagePassthrough.eraseToAnyPublisher()
     }
     
